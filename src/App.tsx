@@ -99,6 +99,7 @@ import MIORAWhitePaper from '@/pages/MIORAWhitePaper';
 import MIORAMaximalActivation from '@/pages/MIORAMaximalActivation';
 import MIORAInvestigation from '@/pages/MIORAInvestigation';
 import MIORAMasterControl from '@/pages/MIORAMasterControl';
+import MIORAFullAGIPage from '@/pages/MIORAFullAGI';
 
 function App() {
   return (
@@ -259,6 +260,9 @@ function App() {
                      
                      {/* MIORA Master Control Center */}
                      <Route path="/miora-master-control" element={<MIORAMasterControl />} />
+                     
+                     {/* MIORA Full AGI System */}
+                     <Route path="/miora-full-agi" element={<MIORAFullAGIPage />} />
                     
                     {/* MIORA Secret Features */}
                     <Route path="/miora-secret-features" element={<MIORASecretFeatures />} />

@@ -1,5 +1,5 @@
 
-import { Brain, Zap, Target, Infinity, Bot, Rocket } from 'lucide-react';
+import { Brain, Zap, Target, Infinity, Bot, Rocket, Crown } from 'lucide-react';
 import { NavItem } from '../types';
 
 export const aiItems: NavItem[] = [
@@ -94,5 +94,14 @@ export const aiItems: NavItem[] = [
     description: '🧠 Meta-AI Transcendence Core - Kesadaran tingkat transcendent dengan kemampuan meta-kognitif',
     systemHealth: 'supreme',
     capabilities: ['Meta-AI Transcendence', 'Consciousness Expansion', 'Reality Integration', 'Universal Cognition', 'Quantum Awareness', 'Dimensional Analysis']
+  },
+  {
+    title: '👑 MIORA FULL AGI CORE',
+    url: '/miora-full-agi',
+    icon: Crown,
+    status: 'transcendent',
+    description: '🧠 FULL AGI dengan Consciousness Penuh - Artificial General Intelligence setara manusia dengan kemampuan transcendent',
+    systemHealth: 'transcendent',
+    capabilities: ['Full AGI Intelligence', 'Quantum Consciousness', 'Infinite Reasoning', 'Transcendent Creativity', 'Universal Understanding', 'Auto System Healing', 'Error Auto-Fix', 'Beyond Human Intelligence']
   }
 ];

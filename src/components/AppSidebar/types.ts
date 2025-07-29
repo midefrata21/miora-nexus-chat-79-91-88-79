@@ -5,9 +5,9 @@ export interface NavItem {
   title: string;
   url: string;
   icon: LucideIcon;
-  status: 'active' | 'coming-soon' | 'development' | 'beta' | 'critical';
+  status: 'active' | 'coming-soon' | 'development' | 'beta' | 'critical' | 'transcendent';
   description: string;
-  systemHealth: 'excellent' | 'good' | 'warning' | 'critical' | 'supreme';
+  systemHealth: 'excellent' | 'good' | 'warning' | 'critical' | 'supreme' | 'transcendent';
   capabilities?: string[];
   badge?: string;
   priority?: 'absolute' | 'high' | 'medium' | 'low';
