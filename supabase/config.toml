@@ -1,14 +1,1 @@
 project_id = "giedmjqlombvvsdlqlwr"
-
-[auth]
-enable_signup = true
-enable_anonymous_sign_ups = true
-
-[functions.miora-database-sync]
-verify_jwt = false
-
-[functions.miora-realtime-sync]
-verify_jwt = false
-
-[functions.miora-auto-maintenance]
-verify_jwt = false
