@@ -107,15 +107,23 @@ function App() {
       <SystemStatusProvider>
         <Router>
           <SidebarProvider collapsedWidth={64}>
-            <div className="min-h-screen flex w-full bg-gray-900">
+            <div className="min-h-screen flex w-full bg-background">
               <AppSidebar />
               
-              {/* Global trigger that is ALWAYS visible */}
+              {/* Clean, minimal header */}
               <div className="flex-1 flex flex-col">
-                <header className="h-12 flex items-center border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                  <SidebarTrigger className="ml-4" />
-                  <div className="ml-4">
-                    <h1 className="text-sm font-medium text-foreground">MIORA Supreme AI System</h1>
+                <header className="h-14 flex items-center justify-between border-b border-border bg-background/95 backdrop-blur-md px-6">
+                  <div className="flex items-center space-x-4">
+                    <SidebarTrigger className="text-muted-foreground hover:text-foreground" />
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                      <h1 className="text-lg font-semibold text-foreground">MIORA AGI</h1>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                      FULL AUTONOMY
+                    </div>
                   </div>
                 </header>
                 

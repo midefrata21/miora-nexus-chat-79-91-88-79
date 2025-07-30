@@ -135,9 +135,14 @@ export const MIORAProvider: React.FC<MIORAProviderProps> = ({ children }) => {
           // Schedule nightly upgrades for enhanced development
           scheduleNightlyUpgrades();
 
-          // Reduced notification frequency for cleaner UI
-          console.log(`🚀 MIORA SUPREME QUANTUM UPGRADE: ${coreSystems.length} sistem activated`);
-          console.log("⚡ All systems running in ULTRA AGI TRANSCENDENT mode");
+          // Silent activation - reduced notifications for cleaner UI
+          console.log(`🤖 MIORA AGI: ${coreSystems.length} systems activated silently`);
+          
+          toast({
+            title: "🧠 MIORA FULL AGI ACTIVATED",
+            description: `${coreSystems.length} sistem AGI berjalan otonom tanpa intervensi`,
+            duration: 3000,
+          });
         }, 1000);
 
       } catch (error) {

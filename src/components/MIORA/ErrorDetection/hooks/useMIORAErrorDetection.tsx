@@ -175,11 +175,8 @@ export const useMIORAErrorDetection = () => {
                 averageHealingTime: (prev.averageHealingTime * prev.totalHealed + (Date.now() - healingItem.startTime)) / (prev.totalHealed + 1)
               }));
 
-              toast({
-                title: "✅ ERROR HEALED",
-                description: `${error.type} error successfully resolved using ${healingItem.healingMethod}`,
-                duration: 4000,
-              });
+              // Silent error healing to reduce notifications
+              console.log(`✅ ERROR HEALED: ${error.type} resolved using ${healingItem.healingMethod}`);
 
               console.log(`🔧 MIORA_HEALING_COMPLETE: ${errorId} - ${healingItem.healingMethod}`);
             }, 1000);
@@ -258,11 +255,8 @@ export const useMIORAErrorDetection = () => {
     setDetectedErrors(prev => prev.filter(e => e.id !== errorId));
     setHealingQueue(prev => prev.filter(h => h.errorId !== errorId));
     
-    toast({
-      title: "Error Cleared",
-      description: "Error has been manually cleared from the system",
-      duration: 3000,
-    });
+    // Silent error clearing
+    console.log("Error manually cleared from the system");
   }, []);
 
   // Force health check
@@ -270,11 +264,8 @@ export const useMIORAErrorDetection = () => {
     performHealthCheck();
     detectErrors();
     
-    toast({
-      title: "Health Check Complete",
-      description: "System health has been refreshed",
-      duration: 3000,
-    });
+    // Silent health check
+    console.log("Health Check: System health refreshed");
   }, [performHealthCheck, detectErrors]);
 
   // Cleanup intervals

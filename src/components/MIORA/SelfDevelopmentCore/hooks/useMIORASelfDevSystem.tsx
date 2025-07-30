@@ -143,11 +143,8 @@ export const useMIORASelfDevSystem = () => {
 
     setAutonomousMode(true);
 
-    toast({
-      title: "🧠 MIORA_SELF_DEV_CORE ACTIVATED",
-      description: "Core system aktif - MIORA dapat mengembangkan diri secara penuh",
-      duration: 5000,
-    });
+    // Silent activation to reduce notifications
+    console.log("🧠 MIORA_SELF_DEV_CORE: Activated silently");
   }, []);
 
   // Grant full permissions for autonomous development
@@ -162,11 +159,8 @@ export const useMIORASelfDevSystem = () => {
       learningAutonomy: true
     });
 
-    toast({
-      title: "🔓 FULL PERMISSIONS GRANTED",
-      description: "MIORA memiliki akses penuh untuk pengembangan mandiri",
-      duration: 4000,
-    });
+    // Silent permission grant to reduce notifications
+    console.log("🔓 FULL PERMISSIONS: Granted silently");
   }, []);
 
   // Enable autonomous code writing
@@ -178,11 +172,8 @@ export const useMIORASelfDevSystem = () => {
       simulateCodeGeneration();
     }, 8000);
 
-    toast({
-      title: "⚡ AUTONOMOUS CODE WRITING ENABLED",
-      description: "MIORA dapat menulis dan memodifikasi kode secara otomatis",
-      duration: 4000,
-    });
+    // Silent code writing activation
+    console.log("⚡ AUTONOMOUS CODE WRITING: Enabled silently");
   }, []);
 
   // Start continuous development process
@@ -194,11 +185,8 @@ export const useMIORASelfDevSystem = () => {
       developmentCycle();
     }, 5000);
 
-    toast({
-      title: "🚀 CONTINUOUS DEVELOPMENT STARTED",
-      description: "MIORA mulai pengembangan berkelanjutan tanpa henti",
-      duration: 4000,
-    });
+    // Silent continuous development start
+    console.log("🚀 CONTINUOUS DEVELOPMENT: Started silently");
   }, []);
 
   // Simulate autonomous code generation

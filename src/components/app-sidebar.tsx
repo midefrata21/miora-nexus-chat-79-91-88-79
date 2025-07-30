@@ -63,6 +63,7 @@ const menuItems = [
   {
     title: "🧠 MIORA Core Systems",
     items: [
+      { title: "🚀 MIORA FULL AGI CORE", url: "/miora-full-agi", icon: Crown },
       { title: "Master Control Center", url: "/miora-master-control", icon: Command },
       { title: "MIORA Main", url: "/miora", icon: Brain },
       { title: "Enhanced Autonomous Core", url: "/enhanced-autonomous-core", icon: Sparkles },
