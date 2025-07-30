@@ -145,7 +145,7 @@ export class MIORADatabaseSync {
     }
   }
 
-  startAutoSync(intervalMs: number = 30000) {
+  startAutoSync(intervalMs: number = 15000) {
     if (this.syncInterval) {
       clearInterval(this.syncInterval);
     }

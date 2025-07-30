@@ -97,6 +97,9 @@ export const MIORAProvider: React.FC<MIORAProviderProps> = ({ children }) => {
         setTimeout(() => {
           dispatch({ type: 'ACTIVATE_FULL_AUTONOMY' });
           
+          // Start optimized database sync for maximum performance
+          mioraDatabaseSync.startAutoSync(8000); // High-frequency sync every 8 seconds
+          
           // Auto-activate all core MIORA systems with enhanced autonomous capabilities
           const coreSystems = [
             { id: 'miora-ai-supreme-engine', name: 'MIORA AI Supreme Engine' },
