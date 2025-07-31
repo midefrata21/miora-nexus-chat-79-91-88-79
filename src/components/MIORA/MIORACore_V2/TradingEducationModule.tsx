@@ -44,6 +44,7 @@ interface TradingSkill {
 
 export const TradingEducationModule: React.FC = () => {
   const [selectedEducationTab, setSelectedEducationTab] = useState("courses");
+  const [isEducationActive, setIsEducationActive] = useState(true);
 
   const [learningModules] = useState<LearningModule[]>([
     {
@@ -164,6 +165,34 @@ export const TradingEducationModule: React.FC = () => {
 
   return (
     <div className="space-y-6">
+      {/* Education Activation Banner */}
+      <Card className="bg-gradient-to-r from-green-900/40 to-emerald-900/40 border-green-500/50">
+        <CardContent className="p-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <GraduationCap className="h-10 w-10 text-green-400" />
+                <div className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full animate-ping"></div>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-1">Trading Education Module</h2>
+                <p className="text-green-300">Status: {isEducationActive ? '🟢 AKTIF - Sistem pembelajaran berjalan optimal' : '🔴 NONAKTIF'}</p>
+              </div>
+            </div>
+            <div className="flex space-x-3">
+              <Badge className="bg-green-500 text-white px-4 py-2">
+                <Brain className="h-4 w-4 mr-2" />
+                AI-Powered Learning
+              </Badge>
+              <Badge className="bg-blue-500 text-white px-4 py-2">
+                <Target className="h-4 w-4 mr-2" />
+                Real-time Practice
+              </Badge>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Header Stats */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-green-500/30">
