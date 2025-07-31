@@ -28,6 +28,7 @@ import { DatabaseStatusWidget } from './Database/components/DatabaseStatusWidget
 import { DatabaseAutoActivator } from './Database/components/DatabaseAutoActivator';
 import { MemoryTrackingPanel } from './Database/components/MemoryTrackingPanel';
 import { TradingEducationModule } from './MIORACore_V2/TradingEducationModule';
+import { AdvancedTradingAI } from './Trading/AdvancedTradingAI';
 
 export const MIORACore_V2: React.FC = () => {
   const {
@@ -165,7 +166,7 @@ export const MIORACore_V2: React.FC = () => {
 
         {/* Main Dashboard Tabs */}
         <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 bg-gray-800/50">
+          <TabsList className="grid w-full grid-cols-6 bg-gray-800/50">
             <TabsTrigger value="dashboard" className="data-[state=active]:bg-purple-600">
               <BarChart3 className="h-4 w-4 mr-2" />
               Visual Dashboard
@@ -185,6 +186,10 @@ export const MIORACore_V2: React.FC = () => {
             <TabsTrigger value="education" className="data-[state=active]:bg-indigo-600">
               <GraduationCap className="h-4 w-4 mr-2" />
               Trading Education
+            </TabsTrigger>
+            <TabsTrigger value="advanced-ai" className="data-[state=active]:bg-purple-600">
+              <Brain className="h-4 w-4 mr-2" />
+              Advanced AI Trading
             </TabsTrigger>
           </TabsList>
 
@@ -341,6 +346,10 @@ export const MIORACore_V2: React.FC = () => {
 
           <TabsContent value="education" className="space-y-6 mt-6">
             <TradingEducationModule />
+          </TabsContent>
+
+          <TabsContent value="advanced-ai" className="space-y-6 mt-6">
+            <AdvancedTradingAI />
           </TabsContent>
         </Tabs>
 
