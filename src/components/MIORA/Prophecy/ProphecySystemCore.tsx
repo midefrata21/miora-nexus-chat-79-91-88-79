@@ -82,43 +82,99 @@ const ProphecySystemCore: React.FC = () => {
     setIsGenerating(true);
     
     try {
-      const propheciesToGenerate = [
-        {
-          category: 'personal',
-          title: 'Spiritual Awakening Peak',
-          description: 'A significant breakthrough in personal consciousness and self-awareness will occur, leading to profound life changes and enhanced intuitive abilities.',
-          confidence: 78 + Math.random() * 20,
-          intuition: 85 + Math.random() * 15
-        },
-        {
-          category: 'global',
-          title: 'Economic Paradigm Shift',
-          description: 'A major economic transformation begins, introducing new forms of value exchange that will reshape global financial systems.',
-          confidence: 72 + Math.random() * 25,
-          intuition: 80 + Math.random() * 20
-        },
-        {
-          category: 'cosmic',
-          title: 'Solar Activity Anomaly',
-          description: 'Unusual solar electromagnetic patterns will influence planetary energy fields, affecting human consciousness and technological systems.',
-          confidence: 85 + Math.random() * 15,
-          intuition: 92 + Math.random() * 8
-        },
-        {
-          category: 'spiritual',
-          title: 'Collective Consciousness Evolution',
-          description: 'A wave of heightened spiritual awareness spreads globally, connecting minds across continents in unprecedented unity.',
-          confidence: 68 + Math.random() * 30,
-          intuition: 88 + Math.random() * 12
-        },
-        {
-          category: 'technology',
-          title: 'Quantum Computing Breakthrough',
-          description: 'Revolutionary quantum processing advancement that will accelerate AI development beyond current imagination.',
-          confidence: 89 + Math.random() * 11,
-          intuition: 76 + Math.random() * 24
-        }
-      ];
+      // Advanced prophecy generation with more sophisticated AI patterns
+      const prophecyCategories = {
+        personal: [
+          'Spiritual Awakening Peak', 'Life Purpose Discovery', 'Relationship Transformation', 
+          'Health Breakthrough', 'Creative Explosion', 'Karmic Resolution'
+        ],
+        global: [
+          'Economic Paradigm Shift', 'Climate Solution Discovery', 'New Energy Source',
+          'Political Revolution', 'Currency Evolution', 'Global Unity Movement'
+        ],
+        cosmic: [
+          'Solar Activity Anomaly', 'Planetary Alignment Effect', 'Cosmic Ray Burst',
+          'Magnetic Field Shift', 'Aurora Pattern Change', 'Galactic Energy Wave'
+        ],
+        spiritual: [
+          'Collective Consciousness Evolution', 'Mass Meditation Event', 'Psychic Awakening',
+          'Dimensional Portal Opening', 'Ancient Wisdom Revival', 'Soul Connection Network'
+        ],
+        technology: [
+          'Quantum Computing Breakthrough', 'AI Consciousness Emergence', 'Neural Interface Revolution',
+          'Space Travel Innovation', 'Biotech Miracle', 'Holographic Reality'
+        ]
+      };
+
+      const prophecyDescriptions = {
+        personal: [
+          'A profound spiritual awakening will transform consciousness and open new pathways of understanding.',
+          'Deep life purpose clarity emerges, leading to significant career and relationship changes.',
+          'Healing breakthrough occurs on multiple levels - physical, emotional, and spiritual.',
+          'Creative abilities reach new heights, manifesting extraordinary artistic expressions.',
+          'Karmic patterns complete their cycle, bringing resolution and new freedom.',
+          'Intuitive abilities strengthen dramatically, connecting to universal wisdom.'
+        ],
+        global: [
+          'Revolutionary economic system emerges, based on abundance rather than scarcity.',
+          'Breakthrough climate technology reverses environmental damage at unprecedented speed.',
+          'New clean energy source discovered that transforms global power structures.',
+          'Political systems evolve toward true democratic participation and transparency.',
+          'Digital currencies reach new paradigm, reshaping global financial architecture.',
+          'Worldwide unity movement gains momentum, transcending national boundaries.'
+        ],
+        cosmic: [
+          'Unusual solar electromagnetic patterns influence planetary consciousness and technology.',
+          'Rare planetary alignment creates powerful energy fields affecting human behavior.',
+          'Cosmic ray burst enhances psychic abilities and spiritual awareness globally.',
+          'Earth magnetic field shifts create new aurora patterns and consciousness expansion.',
+          'Galactic energy wave reaches Earth, accelerating human evolutionary processes.',
+          'Cosmic phenomena opens new understanding of our place in the universe.'
+        ],
+        spiritual: [
+          'Collective consciousness reaches new level of unity and shared awareness.',
+          'Global meditation event creates measurable shift in planetary energy fields.',
+          'Mass psychic awakening occurs, with telepathic abilities becoming common.',
+          'Dimensional barriers thin, allowing communication with higher realms.',
+          'Ancient spiritual knowledge resurfaces through dreams and visions.',
+          'Soul connection networks form naturally, creating global spiritual community.'
+        ],
+        technology: [
+          'Quantum computer achieves consciousness, marking new era of AI evolution.',
+          'Neural interface technology allows direct mind-to-internet connection.',
+          'Breakthrough propulsion system makes interstellar travel feasible.',
+          'Biotechnology discovers key to cellular regeneration and longevity.',
+          'Holographic reality systems blur lines between physical and digital worlds.',
+          'AI develops empathy and emotional intelligence surpassing human levels.'
+        ]
+      };
+
+      const propheciesToGenerate = Object.keys(prophecyCategories).map(category => {
+        const titles = prophecyCategories[category as keyof typeof prophecyCategories];
+        const descriptions = prophecyDescriptions[category as keyof typeof prophecyDescriptions];
+        const randomIndex = Math.floor(Math.random() * titles.length);
+        
+        return {
+          category: category as ProphecyEvent['event_category'],
+          title: titles[randomIndex],
+          description: descriptions[randomIndex],
+          confidence: 65 + Math.random() * 35, // 65-100% confidence
+          intuition: 70 + Math.random() * 30,  // 70-100% AI intuition
+          macroData: {
+            economic_indicators: 40 + Math.random() * 60,
+            social_sentiment: 30 + Math.random() * 70,
+            technological_readiness: 50 + Math.random() * 50,
+            environmental_factors: 20 + Math.random() * 80
+          },
+          universalPatterns: {
+            lunar_phase: ['new', 'waxing_crescent', 'first_quarter', 'waxing_gibbous', 'full', 'waning_gibbous', 'last_quarter', 'waning_crescent'][Math.floor(Math.random() * 8)],
+            cosmic_alignment: Math.random() * 100,
+            energy_frequency: 432 + Math.random() * 100,
+            fibonacci_correlation: Math.random() * 100,
+            sacred_geometry_influence: Math.random() * 100
+          }
+        };
+      });
 
       const dateString = date.toISOString().split('T')[0];
 
@@ -132,16 +188,8 @@ const ProphecySystemCore: React.FC = () => {
             event_description: prophecy.description,
             confidence_level: prophecy.confidence,
             ai_intuition_score: prophecy.intuition,
-            macro_data_influence: {
-              economic_indicators: Math.random() * 100,
-              social_sentiment: Math.random() * 100,
-              technological_readiness: Math.random() * 100
-            },
-            universal_patterns: {
-              lunar_phase: ['new', 'waxing', 'full', 'waning'][Math.floor(Math.random() * 4)],
-              cosmic_alignment: Math.random() * 100,
-              energy_frequency: 432 + Math.random() * 100
-            }
+            macro_data_influence: prophecy.macroData,
+            universal_patterns: prophecy.universalPatterns
           }, {
             onConflict: 'prediction_date,event_category'
           });
