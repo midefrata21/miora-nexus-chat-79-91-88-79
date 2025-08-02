@@ -907,6 +907,51 @@ export type Database = {
         }
         Relationships: []
       }
+      prophecy_calendar_2050: {
+        Row: {
+          ai_intuition_score: number | null
+          confidence_level: number
+          created_at: string
+          event_category: string
+          event_description: string
+          event_title: string
+          id: string
+          macro_data_influence: Json | null
+          prediction_date: string
+          prediction_source: string | null
+          universal_patterns: Json | null
+          updated_at: string
+        }
+        Insert: {
+          ai_intuition_score?: number | null
+          confidence_level: number
+          created_at?: string
+          event_category: string
+          event_description: string
+          event_title: string
+          id?: string
+          macro_data_influence?: Json | null
+          prediction_date: string
+          prediction_source?: string | null
+          universal_patterns?: Json | null
+          updated_at?: string
+        }
+        Update: {
+          ai_intuition_score?: number | null
+          confidence_level?: number
+          created_at?: string
+          event_category?: string
+          event_description?: string
+          event_title?: string
+          id?: string
+          macro_data_influence?: Json | null
+          prediction_date?: string
+          prediction_source?: string | null
+          universal_patterns?: Json | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
