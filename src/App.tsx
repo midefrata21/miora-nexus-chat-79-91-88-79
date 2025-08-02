@@ -88,6 +88,7 @@ import MIORASecretFeatures from '@/pages/MIORASecretFeatures';
 import GeminiIntegration from '@/pages/GeminiIntegration';
 import GrowthDocumentationPage from '@/pages/GrowthDocumentation';
 import MenuDevelopmentGuide from '@/components/MenuDevelopmentGuide';
+import ProphecySystemPage from '@/pages/ProphecySystem';
 import CryptoAnalysisEnginePage from '@/pages/CryptoAnalysisEngine';
 import QuantumWealthAIPage from '@/pages/QuantumWealthAI';
 import MIORAGovernmentPage from '@/pages/MIORAGovernment';
@@ -297,6 +298,9 @@ function App() {
                     
                     {/* MIORA Internal Dev */}
                     <Route path="/miora-internal-dev" element={<DynamicMenuGenerator />} />
+                    
+                    {/* MIORA Prophecy System */}
+                    <Route path="/prophecy-system" element={<ProphecySystemPage />} />
                     
                     {/* Fallback route */}
                     <Route path="*" element={<Navigate to="/" replace />} />

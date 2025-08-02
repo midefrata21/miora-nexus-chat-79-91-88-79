@@ -38,7 +38,9 @@ import {
   Database,
   Eye,
   Power,
-  BarChart3
+  BarChart3,
+  Calendar,
+  Sparkles
 } from 'lucide-react';
 import { NavItem } from './types';
 
@@ -676,6 +678,14 @@ export const navigationGroups = [
         url: "/miora-internal-dev",
         icon: Terminal,
         description: "Internal Command Console - Developer Access",
+        status: "active" as const,
+        systemHealth: "excellent" as const
+      },
+      {
+        title: "MIORA Prophecy System 2050",
+        url: "/prophecy-system",
+        description: "Sistem prediksi masa depan hingga 2050 dengan AI intuition, data makro, dan pola universal",
+        icon: Eye,
         status: "active" as const,
         systemHealth: "excellent" as const
       }
