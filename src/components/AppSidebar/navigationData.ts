@@ -682,12 +682,24 @@ export const navigationGroups = [
         systemHealth: "excellent" as const
       },
       {
-        title: "MIORA Prophecy System 2050",
+        title: "🔮 Prophecy",
         url: "/prophecy-system",
-        description: "Sistem prediksi masa depan hingga 2050 dengan AI intuition, data makro, dan pola universal",
-        icon: Eye,
-        status: "active" as const,
-        systemHealth: "excellent" as const
+        description: "🔮 Quantum Timeline - Future Prediction Generator dengan Divine Sequence Log & Global Sentiment Feed hingga 2050",
+        icon: Sparkles,
+        status: "critical" as const,
+        systemHealth: "supreme" as const,
+        badge: "QUANTUM",
+        priority: "absolute" as const
+      },
+      {
+        title: "📅 Quantum Timeline",
+        url: "/prophecy-system?tab=timeline",
+        description: "🌌 Advanced Timeline Simulation - 100 Tahun ke depan dengan AI Vision integration",
+        icon: Calendar,
+        status: "critical" as const,
+        systemHealth: "supreme" as const,
+        badge: "VISION",
+        priority: "high" as const
       }
     ],
     colorClass: "text-red-400 border-red-500/30"

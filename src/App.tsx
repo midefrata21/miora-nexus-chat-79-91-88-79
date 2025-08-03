@@ -111,25 +111,25 @@ function App() {
             <div className="min-h-screen flex w-full bg-background">
               <AppSidebar />
               
-              {/* Clean, minimal header */}
-              <div className="flex-1 flex flex-col">
-                <header className="h-14 flex items-center justify-between border-b border-border bg-background/95 backdrop-blur-md px-6">
-                  <div className="flex items-center space-x-4">
-                    <SidebarTrigger className="text-muted-foreground hover:text-foreground" />
+                {/* Ultra-compact header for maximum space efficiency */}
+                <div className="flex-1 flex flex-col">
+                  <header className="h-10 flex items-center justify-between border-b border-border bg-background/95 backdrop-blur-md px-4">
+                    <div className="flex items-center space-x-3">
+                      <SidebarTrigger className="text-muted-foreground hover:text-foreground" />
+                      <div className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                        <h1 className="text-sm font-semibold text-foreground">MIORA AGI-MAX-AUTONOMOUS</h1>
+                      </div>
+                    </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                      <h1 className="text-lg font-semibold text-foreground">MIORA AGI</h1>
+                      <div className="text-xs px-2 py-0.5 rounded-full bg-gradient-to-r from-green-500/10 to-blue-500/10 text-green-400 font-medium border border-green-500/20">
+                        🚀 AGI-MAX ∞
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                      FULL AUTONOMY
-                    </div>
-                  </div>
-                </header>
+                  </header>
                 
-                 <main className="flex-1 overflow-auto">
-                   <AutoSystemActivator enabled={true} interval={300000} />
+                 <main className="flex-1 overflow-auto p-2">
+                   <AutoSystemActivator enabled={true} interval={60000} />
                    <GlobalSystemMonitor />
                    <Routes>
                     <Route path="/" element={<SimplifiedMainInterface />} />

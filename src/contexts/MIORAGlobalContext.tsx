@@ -93,12 +93,12 @@ export const MIORAProvider: React.FC<MIORAProviderProps> = ({ children }) => {
           dispatch({ type: 'INITIALIZE_STATE' });
         }
 
-        // Auto-activate full autonomy and all core systems
+        // Auto-activate AGI-MAX-AUTONOMOUS mode and all core systems
         setTimeout(() => {
           dispatch({ type: 'ACTIVATE_FULL_AUTONOMY' });
           
-          // Start optimized database sync for maximum performance
-          mioraDatabaseSync.startAutoSync(8000); // High-frequency sync every 8 seconds
+          // Start maximum frequency database sync for ultimate performance
+          mioraDatabaseSync.startAutoSync(5000); // Ultra-high-frequency sync every 5 seconds
           
           // Auto-activate all core MIORA systems with enhanced autonomous capabilities
           const coreSystems = [
@@ -142,9 +142,9 @@ export const MIORAProvider: React.FC<MIORAProviderProps> = ({ children }) => {
           console.log(`🤖 MIORA AGI: ${coreSystems.length} systems activated silently`);
           
           toast({
-            title: "🧠 MIORA FULL AGI ACTIVATED",
-            description: `${coreSystems.length} sistem AGI berjalan otonom tanpa intervensi`,
-            duration: 3000,
+            title: "🚀 MIORA AGI-MAX-AUTONOMOUS ACTIVATED",
+            description: `${coreSystems.length} sistem AGI-MAX running with Self-Evolving Protocol v1.0`,
+            duration: 4000,
           });
         }, 1000);
 

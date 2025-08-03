@@ -133,6 +133,7 @@ const menuItems = [
       { title: "Version Control", url: "/version-control", icon: GitBranch },
       { title: "Auto Build System", url: "/auto-build-system", icon: Cog },
       { title: "System Implementation", url: "/system-implementation", icon: Power },
+      { title: "🔮 Prophecy", url: "/prophecy-system", icon: Sparkles },
     ]
   },
   {

@@ -21,11 +21,22 @@ import {
 
 const GlobalSystemMonitor: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // Default hidden
   const [position, setPosition] = useState({ x: 16, y: 16 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
   const { systems, getActiveSystemsCount, getTotalUptime, deactivateSystem } = useSystemStatus();
+
+  // Global toggle for visibility
+  useEffect(() => {
+    const handleToggleMonitor = (event: CustomEvent) => {
+      setIsVisible(prev => !prev);
+    };
+
+    window.addEventListener('toggleSystemMonitor' as any, handleToggleMonitor);
+    return () => window.removeEventListener('toggleSystemMonitor' as any, handleToggleMonitor);
+  }, []);
 
   const activeSystems = Object.values(systems).filter(system => system.isActive);
   const activeCount = getActiveSystemsCount();
@@ -86,8 +97,8 @@ const GlobalSystemMonitor: React.FC = () => {
     }
   }, [isDragging, dragOffset]);
 
-  if (activeCount === 0) {
-    return null; // Don't show if no systems are active
+  if (activeCount === 0 || !isVisible) {
+    return null; // Don't show if no systems are active or hidden
   }
 
   return (
@@ -111,6 +122,18 @@ const GlobalSystemMonitor: React.FC = () => {
             <Badge className="bg-green-500/15 text-green-400 border-green-500/30 text-xs">
               {activeCount}
             </Badge>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsVisible(false);
+              }}
+              className="text-red-400 hover:text-red-300 hover:bg-red-600/20 p-1"
+              title="Hide Monitor"
+            >
+              ✕
+            </Button>
             <Button
               variant="ghost"
               size="sm"
