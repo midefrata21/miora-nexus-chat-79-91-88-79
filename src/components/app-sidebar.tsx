@@ -107,6 +107,24 @@ const menuItems = [
     ]
   },
   {
+    title: "📈 Trading Systems",
+    items: [
+      { title: "Crypto Scalping Signals", url: "/crypto-scalping-signals", icon: Target },
+      { title: "Crypto Analysis Engine", url: "/crypto-analysis-engine", icon: Activity },
+      { title: "Quantum Wealth AI", url: "/quantum-wealth-ai", icon: Star },
+      { title: "MIORA Core V2", url: "/miora-core-v2", icon: Layers },
+    ]
+  },
+  {
+    title: "🔴 Hacker Operations",
+    items: [
+      { title: "MIORA Hacker Master", url: "/miora-hacker-master", icon: Shield },
+      { title: "Maximal Activation", url: "/miora-maximal-activation", icon: Power },
+      { title: "Investigation Suite", url: "/miora-investigation", icon: Eye },
+      { title: "Secret Data Access", url: "/miora-secret-features", icon: Lock },
+    ]
+  },
+  {
     title: "🌌 Infinity Systems",
     items: [
       { title: "Infinity System", url: "/miora-infinity-system", icon: Infinity },
