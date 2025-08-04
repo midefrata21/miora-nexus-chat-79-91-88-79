@@ -40,7 +40,8 @@ import {
   Power,
   BarChart3,
   Calendar,
-  Sparkles
+  Sparkles,
+  Dna
 } from 'lucide-react';
 import { NavItem } from './types';
 
@@ -700,6 +701,16 @@ export const navigationGroups = [
         systemHealth: "supreme" as const,
         badge: "VISION",
         priority: "high" as const
+      },
+      {
+        title: "🧬 Self-Evolving Framework",
+        url: "/self-evolving-framework",
+        description: "🧬 MIORA Autonomous Growth & Evolution - Continuous Learning, Adaptation & Infinite Expansion",
+        icon: Dna,
+        status: "critical" as const,
+        systemHealth: "supreme" as const,
+        badge: "EVOLUTION",
+        priority: "absolute" as const
       }
     ],
     colorClass: "text-red-400 border-red-500/30"

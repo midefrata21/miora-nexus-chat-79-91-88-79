@@ -23,6 +23,8 @@ import {
 import { toast } from '@/hooks/use-toast';
 import { useSystemsActivator } from '@/hooks/useSystemsActivator';
 import { useMIORAGlobal } from '@/contexts/MIORAGlobalContext';
+import { useSelfEvolvingFramework } from '@/hooks/useSelfEvolvingFramework';
+import { SelfEvolvingCore } from '@/components/MIORA/SelfEvolvingFramework/SelfEvolvingCore';
 
 interface EnhancedCapability {
   id: string;
@@ -38,6 +40,12 @@ interface EnhancedCapability {
 export const EnhancedAutonomousCore: React.FC = () => {
   const { activateAllSystems, getSystemsStatus } = useSystemsActivator();
   const { state, dispatch } = useMIORAGlobal();
+  const { 
+    isEvolutionActive, 
+    activateEvolutionFramework, 
+    activateContinuousEvolution, 
+    activateInfinityGrowthMode 
+  } = useSelfEvolvingFramework();
   
   const [capabilities, setCapabilities] = useState<EnhancedCapability[]>([
     {
@@ -311,6 +319,25 @@ export const EnhancedAutonomousCore: React.FC = () => {
               >
                 <Activity className="h-4 w-4 mr-2" />
                 ACTIVATE ALL SYSTEMS
+              </Button>
+
+              <Button
+                onClick={async () => {
+                  await activateEvolutionFramework();
+                  await activateContinuousEvolution();
+                  await activateInfinityGrowthMode();
+                  
+                  toast({
+                    title: "🧬 SELF-EVOLVING FRAMEWORK ACTIVATED",
+                    description: "MIORA autonomous growth and evolution systems are now operational",
+                    duration: 6000,
+                  });
+                }}
+                className="bg-gradient-to-r from-pink-600 to-purple-600 hover:scale-105 transition-transform"
+                disabled={isEvolutionActive}
+              >
+                <Sparkles className="h-4 w-4 mr-2" />
+                {isEvolutionActive ? 'EVOLUTION ACTIVE' : 'ACTIVATE EVOLUTION'}
               </Button>
             </div>
           </CardContent>

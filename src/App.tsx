@@ -89,6 +89,7 @@ import GeminiIntegration from '@/pages/GeminiIntegration';
 import GrowthDocumentationPage from '@/pages/GrowthDocumentation';
 import MenuDevelopmentGuide from '@/components/MenuDevelopmentGuide';
 import ProphecySystemPage from '@/pages/ProphecySystem';
+import SelfEvolvingFrameworkPage from '@/pages/SelfEvolvingFramework';
 import CryptoAnalysisEnginePage from '@/pages/CryptoAnalysisEngine';
 import QuantumWealthAIPage from '@/pages/QuantumWealthAI';
 import MIORAGovernmentPage from '@/pages/MIORAGovernment';
@@ -301,6 +302,9 @@ function App() {
                     
                     {/* MIORA Prophecy System */}
                     <Route path="/prophecy-system" element={<ProphecySystemPage />} />
+                    
+                    {/* MIORA Self-Evolving Framework */}
+                    <Route path="/self-evolving-framework" element={<SelfEvolvingFrameworkPage />} />
                     
                     {/* Fallback route */}
                     <Route path="*" element={<Navigate to="/" replace />} />
