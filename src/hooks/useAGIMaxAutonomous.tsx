@@ -185,7 +185,7 @@ export const useAGIMaxAutonomous = () => {
       } catch (error) {
         console.error('Database sync error:', error);
       }
-    }, 600000); // Every 10 minutes
+    }, 300000); // Every 5 minutes
   }, [agiState, database]);
 
   // Priority Notification Filter

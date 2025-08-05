@@ -38,6 +38,8 @@ import QuantumComparativeLearningPage from '@/pages/QuantumComparativeLearning';
 import MIORAMain from '@/pages/MIORAMain';
 import CryptoScalpingSignals from '@/pages/CryptoScalpingSignals';
 import EnhancedAutonomousCorePage from '@/pages/EnhancedAutonomousCore';
+import SystemStatus from '@/pages/SystemStatus';
+import QuickActions from '@/pages/QuickActions';
 import Dashboard from '@/pages/Dashboard';
 import Chat from '@/pages/Chat';
 import KnowledgeDiscovery from '@/pages/KnowledgeDiscovery';
@@ -305,6 +307,8 @@ function App() {
                     
                     {/* MIORA Self-Evolving Framework */}
                     <Route path="/self-evolving-framework" element={<SelfEvolvingFrameworkPage />} />
+                    <Route path="/system-status" element={<SystemStatus />} />
+                    <Route path="/quick-actions" element={<QuickActions />} />
                     
                     {/* Fallback route */}
                     <Route path="*" element={<Navigate to="/" replace />} />
