@@ -114,8 +114,7 @@ function App() {
             <div className="min-h-screen flex w-full bg-background">
               <AppSidebar />
               
-                {/* Ultra-compact header for maximum space efficiency */}
-                <div className="flex-1 flex flex-col">
+              <div className="flex-1 flex flex-col">
                   <header className="h-10 flex items-center justify-between border-b border-border bg-background/95 backdrop-blur-md px-4">
                     <div className="flex items-center space-x-3">
                       <SidebarTrigger className="text-muted-foreground hover:text-foreground" />
