@@ -122,6 +122,8 @@ export function AppSidebar() {
   const { collapsed } = useSidebar()
   const location = useLocation()
   const currentPath = location.pathname
+  
+  console.log('AppSidebar render:', { collapsed, currentPath })
   const [openGroups, setOpenGroups] = useState<string[]>(() => {
     // Auto-open all main groups by default for better visibility
     return [
