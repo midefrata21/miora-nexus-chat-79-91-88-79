@@ -123,11 +123,13 @@ export function AppSidebar() {
   const location = useLocation()
   const currentPath = location.pathname
   const [openGroups, setOpenGroups] = useState<string[]>(() => {
-    // Auto-open group that contains current route
-    const activeGroup = menuItems.find(group => 
-      group.items.some(item => item.url === currentPath)
-    )
-    return activeGroup ? [activeGroup.title] : ["🏠 Dashboard"]
+    // Auto-open all main groups by default for better visibility
+    return [
+      "🏠 Dashboard", 
+      "📊 Trading Systems", 
+      "🛡️ Hacker Operations", 
+      "🧠 MIORA Core"
+    ]
   })
 
   const isActive = (path: string) => currentPath === path
@@ -146,7 +148,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar
-      className={`${collapsed ? "w-16" : "w-80"} transition-all duration-300 border-r border-border/50`}
+      className={`${collapsed ? "w-16" : "w-80"} transition-all duration-300 border-r border-border/50 bg-background`}
       collapsible="icon"
     >
       <SidebarHeader className="border-b border-border/50 p-4">
