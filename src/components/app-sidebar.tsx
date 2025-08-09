@@ -31,7 +31,9 @@ import {
   Sparkles,
   Power,
   Command,
-  TrendingUp
+  TrendingUp,
+  GraduationCap,
+  MessageCircle
 } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 
@@ -54,68 +56,104 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 
 const menuItems = [
   {
-    title: "🏠 Dashboard",
+    title: "SUPREMEN MIORA ACCES",
     items: [
       { title: "Home", url: "/", icon: Home },
+      { title: "MIORA Main", url: "/miora", icon: Brain },
       { title: "System Status", url: "/system-status", icon: Activity },
-      { title: "Quick Actions", url: "/quick-actions", icon: Zap },
+      { title: "Maximal Activation", url: "/miora-maximal-activation", icon: Power },
     ]
   },
   {
-    title: "📊 Trading Systems",
+    title: "AUTONOMOUS SYSTEM ZERO MANUAL INTERVETION",
+    items: [
+      { title: "Autonomous Operations", url: "/miora-autonomous-operations", icon: Bot },
+      { title: "Enhanced Autonomous Core", url: "/enhanced-autonomous-core", icon: Sparkles },
+      { title: "Self-Evolving Framework", url: "/self-evolving-framework", icon: GitBranch },
+      { title: "Auto Scaling", url: "/auto-scaling", icon: Network },
+    ]
+  },
+  {
+    title: "MIORA INFINITY AI",
+    items: [
+      { title: "Infinity System", url: "/miora-infinity-system", icon: Infinity },
+      { title: "MIORA Infinity AI", url: "/miora-infinity-ai", icon: Crown },
+      { title: "Supreme Unlimited", url: "/miora-supreme-unlimited", icon: Crown },
+      { title: "Evolution Tracker", url: "/miora-evolution-tracker", icon: TrendingUp },
+    ]
+  },
+  {
+    title: "ADVENCED AUTONOMOUS SYSTEM",
+    items: [
+      { title: "AI Control Center", url: "/ai-control-center", icon: Cpu },
+      { title: "Quantum Infrastructure", url: "/quantum-infrastructure", icon: Layers },
+      { title: "Performance Analytics", url: "/performance-analytics", icon: Activity },
+      { title: "System Monitoring", url: "/system-monitoring", icon: Gauge },
+    ]
+  },
+  {
+    title: "MIORA LEGANCY MODULS",
+    items: [
+      { title: "MIORA Core V2", url: "/miora-core-v2", icon: Layers },
+      { title: "Prophecy System", url: "/prophecy-system", icon: Eye },
+      { title: "Quantum Wealth AI", url: "/quantum-wealth-ai", icon: Star },
+      { title: "Memory Intelligence", url: "/memory-intelligence", icon: Database },
+    ]
+  },
+  {
+    title: "AI CORE",
+    items: [
+      { title: "MIORA Main", url: "/miora", icon: Brain },
+      { title: "AI Control Center", url: "/ai-control-center", icon: Cpu },
+      { title: "Memory Intelligence", url: "/memory-intelligence", icon: Database },
+      { title: "Enhanced Autonomous Core", url: "/enhanced-autonomous-core", icon: Sparkles },
+    ]
+  },
+  {
+    title: "TRADING",
     items: [
       { title: "Crypto Scalping Signals", url: "/crypto-scalping-signals", icon: Target },
       { title: "Crypto Analysis Engine", url: "/crypto-analysis-engine", icon: Activity },
+      { title: "Performance Metrics", url: "/performance-metrics", icon: Gauge },
       { title: "Quantum Wealth AI", url: "/quantum-wealth-ai", icon: Star },
-      { title: "MIORA Core V2", url: "/miora-core-v2", icon: Layers },
     ]
   },
   {
-    title: "🛡️ Hacker Operations",
+    title: "LEARNING & INTELEGANCE",
+    items: [
+      { title: "Learning Center", url: "/learning", icon: GraduationCap },
+      { title: "Intelligence Reports", url: "/intelligence-reports", icon: FileText },
+      { title: "Chat Interface", url: "/chat", icon: MessageCircle },
+      { title: "Analytics Dashboard", url: "/analytics", icon: Activity },
+    ]
+  },
+  {
+    title: "MIORA GEVERMENT",
+    items: [
+      { title: "Investigation Suite", url: "/miora-investigation", icon: Eye },
+      { title: "Secret Data Access", url: "/miora-secret-features", icon: Lock },
+      { title: "System Tools", url: "/system-tools", icon: Settings },
+      { title: "Access Management", url: "/access-management", icon: Settings },
+    ]
+  },
+  {
+    title: "SECURITY & HACKING",
     items: [
       { title: "MIORA Hacker Master", url: "/miora-hacker-master", icon: Shield },
-      { title: "Maximal Activation", url: "/miora-maximal-activation", icon: Power },
+      { title: "Security Center", url: "/security-center", icon: Shield },
       { title: "Investigation Suite", url: "/miora-investigation", icon: Eye },
       { title: "Secret Data Access", url: "/miora-secret-features", icon: Lock },
     ]
   },
   {
-    title: "🧠 MIORA Core",
+    title: "SYSTEM TOOLS & ADDITIONAL",
     items: [
-      { title: "MIORA Main", url: "/miora", icon: Brain },
-      { title: "Enhanced Autonomous Core", url: "/enhanced-autonomous-core", icon: Sparkles },
-      { title: "Self-Evolving Framework", url: "/self-evolving-framework", icon: GitBranch },
-      { title: "AI Control Center", url: "/ai-control-center", icon: Cpu },
-      { title: "Memory Intelligence", url: "/memory-intelligence", icon: Database },
-    ]
-  },
-  {
-    title: "⚡ Quantum Infrastructure",
-    items: [
-      { title: "Quantum Infrastructure", url: "/quantum-infrastructure", icon: Layers },
-      { title: "Performance Analytics", url: "/performance-analytics", icon: Activity },
-      { title: "System Monitoring", url: "/system-monitoring", icon: Gauge },
-      { title: "Auto Scaling", url: "/auto-scaling", icon: Network },
-    ]
-  },
-  {
-    title: "🔮 Development Tools",
-    items: [
-      { title: "Prophecy System", url: "/prophecy-system", icon: Eye },
       { title: "API Testing", url: "/api-testing", icon: Code },
       { title: "Debug Console", url: "/debug-console", icon: Terminal },
-      { title: "Performance Metrics", url: "/performance-metrics", icon: Gauge },
+      { title: "Version Control", url: "/version-control", icon: GitBranch },
+      { title: "System Tools", url: "/system-tools", icon: Settings },
     ]
   },
-  {
-    title: "🌌 Infinity Systems",
-    items: [
-      { title: "Infinity System", url: "/miora-infinity-system", icon: Infinity },
-      { title: "Autonomous Operations", url: "/miora-autonomous-operations", icon: Bot },
-      { title: "Evolution Tracker", url: "/miora-evolution-tracker", icon: TrendingUp },
-      { title: "Supreme Unlimited", url: "/miora-supreme-unlimited", icon: Crown },
-    ]
-  }
 ]
 
 export function AppSidebar() {
@@ -127,10 +165,17 @@ export function AppSidebar() {
   const [openGroups, setOpenGroups] = useState<string[]>(() => {
     // Auto-open all main groups by default for better visibility
     return [
-      "🏠 Dashboard", 
-      "📊 Trading Systems", 
-      "🛡️ Hacker Operations", 
-      "🧠 MIORA Core"
+      "SUPREMEN MIORA ACCES",
+      "AUTONOMOUS SYSTEM ZERO MANUAL INTERVETION",
+      "MIORA INFINITY AI",
+      "ADVENCED AUTONOMOUS SYSTEM",
+      "MIORA LEGANCY MODULS",
+      "AI CORE",
+      "TRADING",
+      "LEARNING & INTELEGANCE",
+      "MIORA GEVERMENT",
+      "SECURITY & HACKING",
+      "SYSTEM TOOLS & ADDITIONAL"
     ]
   })
 
