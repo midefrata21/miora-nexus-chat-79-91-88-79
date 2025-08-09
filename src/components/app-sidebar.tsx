@@ -195,8 +195,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar
-      className={`${collapsed ? "w-16" : "w-80"} transition-all duration-300 border-r border-border/50 bg-background`}
-      collapsible="icon"
+      className={`transition-all duration-300 border-r border-border/50 bg-background`}
     >
       <SidebarHeader className="border-b border-border/50 p-4">
         {!collapsed && (
@@ -276,7 +275,6 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="border-t border-border/50 p-4">
-        <SidebarTrigger className="w-full" />
         {!collapsed && (
           <div className="text-center">
             <p className="text-xs text-muted-foreground">
